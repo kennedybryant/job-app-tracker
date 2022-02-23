@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TodoForm extends React.Component {
+class JobForm extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -56,10 +56,10 @@ class TodoForm extends React.Component {
                 <input onChange={this.handleChanges} type='date' name='intDate' value={this.state.job.intDate} />
                 <input onChange={this.handleChanges} type='text' name='posting' value={this.state.job.posting} />
                 <input onChange={this.handleChanges} type='text' name='notes' value={this.state.job.notes} />
-                <button type="submit">Add Todo</button>
+                <button type="submit">Add Job</button>
             </form>
         );
     }
 }
 
-export default TodoForm;
+export default JobForm;

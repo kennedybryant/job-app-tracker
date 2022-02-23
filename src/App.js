@@ -1,7 +1,7 @@
 import React from 'react';
-import TodoList from './components/TodoList';
-import TodoForm from './components/TodoForm';
-import './components/Todo.css';
+import JobList from './components/JobList';
+import JobForm from './components/JobForm';
+import './components/Job.css';
 
 const jobs = [
   {
@@ -89,10 +89,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
-          <h3>Todo List:</h3>
-            <TodoList handleClear={this.handleClear} handleToggle={this.handleToggle} jobs={this.state.jobs}/>
-            <TodoForm handleAddJob={this.handleAddJob}/>
+        <h2>Welcome to your Job Application Tracker!</h2>
+          <h3>Job List:</h3>
+            <JobList handleClear={this.handleClear} handleToggle={this.handleToggle} jobs={this.state.jobs}/>
+            <JobForm handleAddJob={this.handleAddJob}/>
       </div>
     );
   }
