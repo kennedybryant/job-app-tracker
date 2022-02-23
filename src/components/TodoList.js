@@ -10,8 +10,8 @@ const handleClick = () => {
 
     return (
         <div>
-            {props.todo.map(item => (
-                <Todo handleToggle={props.handleToggle} key={item.id} item={item}/>
+            {props.jobs.map(job => (
+                <Todo handleToggle={props.handleToggle} key={job.id} job={job}/>
             ))}
             <button onClick={handleClick}>Clear Completed</button>
         </div>
