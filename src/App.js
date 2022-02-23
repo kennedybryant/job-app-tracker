@@ -3,14 +3,28 @@ import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 import './components/Todo.css';
 
-const todo = [
+const jobs = [
   {
-    task: 'Organize Garage',
+    title: "Frontend Engineer",
+    company: "Star Company",
+    location: "Atlanta, Ga",
+    remote: true,
+    status: "Applied",
+    intDate: "01/01/2022",
+    posting: "https://www.linkedin.com/in/kennedy-bryant/",
+    notes: "Paid holidays",
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    title: "Fullstack Developer",
+    company: "Star Company",
+    location: "Atlanta, Ga",
+    remote: false,
+    status: "Interested",
+    intDate: "",
+    posting: "https://www.linkedin.com/in/kennedy-bryant/",
+    notes: "Internship",
     id: 1528817084358,
     completed: false
   }
@@ -20,7 +34,7 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      todo: todo
+      jobs: jobs
     }
   }
   // you will need a place to store your state in this component.
@@ -30,37 +44,44 @@ class App extends React.Component {
   handleToggle = (id) => {
     this.setState({
       ...this.state,
-      todo: this.state.todo.map(item => {
-        if(item.id === id) {
+      jobs: this.state.jobs.map(job => {
+        if(job.id === id) {
           return ({
-            ...item,
-            completed: !item.completed
+            ...job,
+            completed: !job.completed
           });
         } else {
-          return item;
+          return job;
         }
       })
     })
   }
 
-  handleAddItem = (task) => {
-    const newItem = {
-      task: task,
+  handleAddJob = (job) => {
+    const newJob = {
+      title: job.title,
+      company: job.company,
+      location: job.location,
+      remote: job.remote,
+      status: job.status,
+      intDate: job.intDate,
+      posting: job.posting,
+      notes: job.notes,
       id: Date.now(),
       completed: false,
     }
 
     this.setState({
       ...this.state,
-      todo: [...this.state.todo, newItem]
+      jobs: [...this.state.jobs, newJob]
     });
   }
 
   handleClear = () => {
     this.setState({
       ...this.state,
-      todo:this.state.todo.filter(item => {
-        return !item.completed;
+      jobs: this.state.jobs.filter(job => {
+        return !job.completed;
       })
     });
   }
@@ -70,8 +91,8 @@ class App extends React.Component {
       <div>
         <h2>Welcome to your Todo App!</h2>
           <h3>Todo List:</h3>
-            <TodoList handleClear={this.handleClear} handleToggle={this.handleToggle} todo={this.state.todo}/>
-            <TodoForm handleAddItem={this.handleAddItem}/>
+            <TodoList handleClear={this.handleClear} handleToggle={this.handleToggle} jobs={this.state.jobs}/>
+            <TodoForm handleAddJob={this.handleAddJob}/>
       </div>
     );
   }

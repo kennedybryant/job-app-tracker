@@ -30,7 +30,7 @@ class TodoForm extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        // this.props.handleAddItem(this.state.job);
+        this.props.handleAddJob(this.state.job);
         console.log(this.state.job)
     };
 
