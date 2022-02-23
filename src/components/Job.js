@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Todo = props => {
+const Job = props => {
 
     const handleClick = () => {
         props.handleToggle(props.job.id);
@@ -21,4 +21,4 @@ const Todo = props => {
     );
 };
 
-export default Todo;
+export default Job;
