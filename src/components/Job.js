@@ -14,7 +14,7 @@ const Job = props => {
             <td>{props.job.remote ? 'Remote' : 'On-Site'}</td>
             <td>{props.job.status}</td>
             <td>{props.job.intDate}</td>
-            <td>{props.job.posting}</td>
+            <td><a href={props.job.posting}>{props.job.posting}</a></td>
             <td>{props.job.notes}</td>
             
         </tr>
