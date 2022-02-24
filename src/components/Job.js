@@ -8,6 +8,7 @@ const Job = props => {
 
     return (
         <tr onClick={handleClick} className={`job${props.job.completed ? '-completed' : '-incomplete'}`}>
+            <td>{props.job.id}</td>
             <td>{props.job.title}</td>
             <td>{props.job.company}</td>
             <td>{props.job.location}</td>

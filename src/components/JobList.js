@@ -11,9 +11,10 @@ const JobList = props => {
 // }
 
     return (
-        <Table className='jobTable'>
+        <Table className='jobTable table-striped table-hover table-responsive'>
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Role Title</th>
                     <th>Company</th>
                     <th>Location</th>
