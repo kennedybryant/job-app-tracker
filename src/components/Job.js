@@ -7,17 +7,17 @@ const Job = props => {
     }
 
     return (
-        <div onClick={handleClick} className={`job${props.job.completed ? ' completed' : ''}`}>
-            <div>{props.job.title}</div>
-            <div>{props.job.company}</div>
-            <div>{props.job.location}</div>
-            <div>{props.job.remote ? 'Remote' : 'On-Site'}</div>
-            <div>{props.job.status}</div>
-            <div>{props.job.intDate}</div>
-            <div>{props.job.posting}</div>
-            <div>{props.job.notes}</div>
+        <tr onClick={handleClick} className={`job${props.job.completed ? '-completed' : '-incomplete'}`}>
+            <td>{props.job.title}</td>
+            <td>{props.job.company}</td>
+            <td>{props.job.location}</td>
+            <td>{props.job.remote ? 'Remote' : 'On-Site'}</td>
+            <td>{props.job.status}</td>
+            <td>{props.job.intDate}</td>
+            <td><a href={props.job.posting}>{props.job.posting}</a></td>
+            <td>{props.job.notes}</td>
             
-        </div>
+        </tr>
     );
 };
 

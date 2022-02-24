@@ -2,6 +2,7 @@ import React from 'react';
 import JobList from './components/JobList';
 import JobForm from './components/JobForm';
 import './components/Job.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const jobs = [
   {
@@ -10,7 +11,7 @@ const jobs = [
     location: "Atlanta, Ga",
     remote: true,
     status: "Applied",
-    intDate: "01/01/2022",
+    intDate: "2022-01-01",
     posting: "https://www.linkedin.com/in/kennedy-bryant/",
     notes: "Paid holidays",
     id: 1528817077286,

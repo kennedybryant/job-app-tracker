@@ -3,18 +3,35 @@
 import React from 'react';
 import Job from './Job';
 
+import { Table } from 'react-bootstrap';
+
 const JobList = props => {
-const handleClick = () => {
-    props.handleClear();
-}
+// const handleClick = () => {
+//     props.handleClear();
+// }
 
     return (
-        <div>
-            {props.jobs.map(job => (
+        <Table className='jobTable'>
+            <thead>
+                <tr>
+                    <th>Role Title</th>
+                    <th>Company</th>
+                    <th>Location</th>
+                    <th>Remote?</th>
+                    <th>Status</th>
+                    <th>Interview Date</th>
+                    <th>Job Post</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {props.jobs.map(job => (
                 <Job handleToggle={props.handleToggle} key={job.id} job={job}/>
             ))}
-            <button onClick={handleClick}>Clear Completed</button>
-        </div>
+            </tbody>
+            
+            {/* <button onClick={handleClick}>Clear Completed</button> */}
+        </Table>
     )
 };
 
