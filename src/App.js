@@ -2,6 +2,7 @@ import React from 'react';
 import JobList from './components/JobList';
 import JobForm from './components/JobForm';
 import './components/Job.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const jobs = [
   {
