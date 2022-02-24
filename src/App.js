@@ -76,6 +76,7 @@ class App extends React.Component {
       ...this.state,
       jobs: [...this.state.jobs, newJob]
     });
+    console.log(this.state.jobs)
   }
 
   handleClear = () => {
